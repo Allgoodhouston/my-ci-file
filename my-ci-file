@@ -1,8 +1,28 @@
 #here_i_am
 
-
-01234
-
-56789
-
+pipeline{
+    agent any
+    
+    stages{
+        
+        stage("stage 1"){
+            steps{
+                script{
+                    echo 'hello from script 1!'
+                }
+            }
+        }
+        
+        stage("stage 2"){
+            steps{
+                script{
+                    sleep 10
+                    echo 'hello from script 2!'
+                }
+            }
+            
+        }
+        
+    }
+}
 
